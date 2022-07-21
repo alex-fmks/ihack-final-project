@@ -23,8 +23,8 @@
   padding: 1rem;
   border-style: none;
   border-radius: 10px;
-  background-color: blue;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: blue;
   font-weight: bold;
   cursor: pointer;
 }
