@@ -1,0 +1,30 @@
+.nav-header {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-btns {
+  display: flex;
+  gap: 20px
+} 
+
+.nav-sign-btn {
+  padding: 1rem;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #800080;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-log-btn {
+  padding: 1rem;
+  border-style: none;
+  border-radius: 10px;
+  background-color: blue;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}

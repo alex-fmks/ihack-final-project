@@ -1,15 +1,15 @@
-import "./App.css";
-import Link from "react";
-import SignUp from "./pages/SignUp";
+import { Routes, Route } from "react-router-dom";
+import Landing from "./pages/Landing/Landing";
+import SignUp from "./pages/SignUp/SignUp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Ironhack Final Project 👻</p>
-        <Link to={<SignUp />} />
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+    </>
   );
 }
 
