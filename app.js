@@ -2,6 +2,8 @@
 // https://www.npmjs.com/package/dotenv
 require("dotenv/config");
 
+const { isAuthenticated } = require("./middleware/jwt.middleware");
+
 // ℹ️ Connects to the database
 require("./db");
 

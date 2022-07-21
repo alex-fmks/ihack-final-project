@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import Logo from "../../logo.svg";
+import Modal from "../Modal/Modal";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="nav-header">
       <img src={Logo} alt="Header Logo" width="60px" />
       <div className="auth-btns">
         <nav>
-          <Link to="/signup" />
-          <button className="nav-sign-btn">Sign Up</button>
+          <Link to="/signup">
+            <button className="nav-sign-btn">Sign Up</button>
+          </Link>
         </nav>
         <nav>
-          <Link to="/" />
-          <button className="nav-log-btn">Log In</button>
+          <button onClick={() => setIsOpen(true)} className="nav-log-btn">
+            Log In
+          </button>
+          {<Modal open={isOpen} onClose={() => setIsOpen(false)}></Modal>}
         </nav>
       </div>
     </div>

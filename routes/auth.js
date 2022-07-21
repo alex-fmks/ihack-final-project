@@ -39,4 +39,30 @@ router.post("/signup", (req, res, next) => {
   });
 });
 
+router.post("/login", (req, res, next) => {
+  const { username, password } = req.body;
+  if (username === "" || password === "") {
+    res.status(400).json({ message: "Please provide credentials" });
+  }
+  User.findeOne({ username })
+    .then((foundUser) => {
+      if (!foundUser) {
+        res.status(400).json({ message: "User does not exist" });
+      }
+      const passwordCorrect = bcrypt.compareSync(password, foundUser.password);
+      if (passwordCorrect) {
+        const { _id, email, name } = foundUser;
+        const payload = { _id, email, name };
+        const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
+          algorithm: "HS256",
+          expiresIn: "6h",
+        });
+        res.status(200).json({ authToken: authToken });
+      } else {
+        res.status(401).json({ message: "Unable to authenticate the user" });
+      }
+    })
+    .catch((err) => res.status(500).json({ message: "Internal Server Error" }));
+});
+
 module.exports = router;
