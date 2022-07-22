@@ -2,7 +2,7 @@
 // https://www.npmjs.com/package/dotenv
 require("dotenv/config");
 
-const { isAuthenticated } = require("./middleware/jwt.middleware");
+const { isAuthenticated } = require("./middlewares/jwt");
 
 // ℹ️ Connects to the database
 require("./db");
@@ -18,8 +18,8 @@ require("./config")(app);
 
 // 👇 Start handling routes here
 // Contrary to the views version, all routes are controlled from the routes/index.js
-const allRoutes = require("./routes/index.routes");
-app.use("/api", allRoutes);
+// const allRoutes = require("./routes/index.routes");
+// app.use("/api", isAuthenticated, allRoutes);
 
 const auth = require("./routes/auth");
 app.use("/api/auth", auth);

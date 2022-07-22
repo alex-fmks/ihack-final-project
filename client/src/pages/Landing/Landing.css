@@ -6,3 +6,16 @@
 .hero-headline {
   font-size: 4rem;
 }
+
+@media only screen and (max-width: 850px) {
+  .hero {
+    max-width: 100%;
+    padding: 2rem;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+}
