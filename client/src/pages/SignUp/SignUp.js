@@ -31,7 +31,7 @@ function SignUp() {
   const handlePassword = (event) => setPassword(event.target.value);
 
   return (
-    <>
+    <div className="sign-container">
       <form onSubmit={handleSubmit} style={{ width: "30%", padding: "2rem" }}>
         <h1>Signup</h1>
         {/*         <h3>Already have an account?</h3>
@@ -75,7 +75,7 @@ function SignUp() {
       </form>
 
       {errorMessage && <h5>{errorMessage}</h5>}
-    </>
+    </div>
   );
 }
 
