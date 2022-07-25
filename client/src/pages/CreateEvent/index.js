@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
 
-function CreateEvent() {
+function CreateEvent(props) {
   const [title, setTitle] = useState("");
   const [client, setClient] = useState("");
   const [date, setDate] = useState("");
@@ -16,12 +16,20 @@ function CreateEvent() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const requestBody = { title, client, date, street, houseNumber, postcode };
+    const requestBody = {
+      title,
+      client,
+      date,
+      location: { street, houseNumber, postcode },
+      street,
+      houseNumber,
+      postcode,
+    };
     axios
-      .post("/events/create-event", requestBody)
+      .post("/create-event", requestBody)
       .then((response) => {
         console.log(response.data);
-        navigate("/");
+        navigate("http://localhost:5005/events");
       })
       .catch((err) => {
         const errorDescription = err.response.data.message;

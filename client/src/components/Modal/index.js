@@ -24,7 +24,7 @@ function Modal({ open, onClose }) {
         const token = response.data.authToken;
         storeToken(token);
         verifyStoredToken().then(() => {
-          navigate("/dashboard");
+          navigate("/events");
         });
       })
       .catch((err) => {

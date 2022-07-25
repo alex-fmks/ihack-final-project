@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import SignUp from "./pages/SignUp/SignUp";
-import Dashboard from "./pages/Dashboard/index";
+import Events from "./pages/Events/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CreateEvent from "./pages/CreateEvent";
 
@@ -12,10 +12,10 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/signup" element={<SignUp />} />
         <Route
-          path="/dashboard"
+          path="/events"
           element={
             <ProtectedRoute redirectTo="/">
-              <Dashboard />
+              <Events />
             </ProtectedRoute>
           }
         ></Route>

@@ -11,6 +11,7 @@
   background-color: blue;
   color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .event-list {

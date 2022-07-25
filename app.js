@@ -24,8 +24,8 @@ require("./config")(app);
 const auth = require("./routes/auth");
 app.use("/api/auth", auth);
 
-const dashboardRouter = require("./routes/index.routes");
-app.use("/dashboard", dashboardRouter, isAuthenticated);
+const eventsRouter = require("./routes/index.routes");
+app.use("/events", eventsRouter, isAuthenticated);
 
 const event = require("./routes/event");
 app.use("/events", event);

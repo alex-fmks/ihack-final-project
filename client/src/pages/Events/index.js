@@ -1,7 +1,7 @@
 import React from "react";
 import "./index.css";
 
-function Dashboard() {
+function Events() {
   return (
     <>
       <div className="event-header">
@@ -13,7 +13,7 @@ function Dashboard() {
       <div className="event-list">
         <div className="event-item">
           <p>Event title</p>
-          <a href="/dashboard/:id">
+          <a href="/events/:id">
             <button className="view-btn">View</button>
           </a>
         </div>
@@ -22,4 +22,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Events;
