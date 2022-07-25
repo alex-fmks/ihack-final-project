@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import SignUp from "./pages/SignUp/SignUp";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CreateEvent from "./pages/CreateEvent";
 
@@ -22,7 +22,7 @@ function App() {
         <Route
           path="/create-event"
           element={
-            <ProtectedRoute redirectTo="/dashboard">
+            <ProtectedRoute redirectTo="/">
               <CreateEvent />
             </ProtectedRoute>
           }

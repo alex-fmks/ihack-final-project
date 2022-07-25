@@ -27,6 +27,9 @@ app.use("/api/auth", auth);
 const dashboardRouter = require("./routes/index.routes");
 app.use("/dashboard", dashboardRouter, isAuthenticated);
 
+const event = require("./routes/event");
+app.use("/events", event);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
