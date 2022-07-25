@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css";
+import "./index.css";
 import Logo from "../../logo.svg";
-import Modal from "../Modal/Modal";
+import Modal from "../Modal";
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth";
 

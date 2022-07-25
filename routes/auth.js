@@ -1,8 +1,8 @@
 const router = require("express").Router();
-const { IconCloudFog } = require("@tabler/icons");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
+const { isAuthenticated } = require("./../middlewares/jwt");
 
 router.post("/signup", (req, res, next) => {
   const { email, password, username } = req.body;
@@ -53,8 +53,9 @@ router.post("/login", (req, res, next) => {
       }
       const passwordCorrect = bcrypt.compareSync(password, foundUser.password);
       if (passwordCorrect) {
-        const { _id, email, name } = foundUser;
-        const payload = { _id, email, name };
+        const { _id, email, username } = foundUser;
+        const payload = { _id, email, username };
+        console.log("payload after user found", payload);
         const authToken = jwt.sign(payload, process.env.TOKEN_SECRET, {
           algorithm: "HS256",
           expiresIn: "6h",
@@ -68,7 +69,7 @@ router.post("/login", (req, res, next) => {
     .catch((err) => res.status(500).json({ message: "Internal Server Error" }));
 });
 
-router.get("/verify", (req, res, next) => {
+router.get("/verify", isAuthenticated, (req, res, next) => {
   console.log(`req.payload`, req.payload);
   res.status(200).json(req.payload);
 });

@@ -6,8 +6,8 @@ const eventSchema = new Schema({
   date: String,
   location: {
     street: String,
-    houseNumber: String,
-    postcode: String,
+    houseNumber: Number,
+    postcode: Number,
   },
 });
 

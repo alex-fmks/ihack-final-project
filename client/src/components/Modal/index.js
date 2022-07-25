@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import "./Modal.css";
+import "./index.css";
 import Logo from "../../logo.svg";
 import XIcon from "../../xclose.svg";
 import { useNavigate } from "react-router-dom";
