@@ -8,8 +8,8 @@ function CreateEvent(props) {
   const [client, setClient] = useState("");
   const [date, setDate] = useState("");
   const [street, setStreet] = useState("");
-  const [houseNumber, setHouseNumber] = useState(0);
-  const [postcode, setPostcode] = useState(0);
+  const [houseNumber, setHouseNumber] = useState("");
+  const [postcode, setPostcode] = useState("");
   const [errorMessage, setErrorMessage] = useState(undefined);
 
   const navigate = useNavigate();
@@ -21,15 +21,15 @@ function CreateEvent(props) {
       client,
       date,
       location: { street, houseNumber, postcode },
-      street,
-      houseNumber,
-      postcode,
     };
+    const storedToken = localStorage.getItem("authToken");
     axios
-      .post("/create-event", requestBody)
+      .post("http://localhost:5005/api/events", requestBody, {
+        headers: { Authorization: `Bearer ${storedToken}` },
+      })
       .then((response) => {
         console.log(response.data);
-        navigate("http://localhost:5005/events");
+        navigate("/events");
       })
       .catch((err) => {
         const errorDescription = err.response.data.message;

@@ -4,6 +4,7 @@ import SignUp from "./pages/SignUp/SignUp";
 import Events from "./pages/Events/index";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CreateEvent from "./pages/CreateEvent";
+import Eventboard from "./pages/Eventboard";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             </ProtectedRoute>
           }
         ></Route>
+        <Route path="/events/:id" element={<Eventboard />} />
       </Routes>
     </>
   );

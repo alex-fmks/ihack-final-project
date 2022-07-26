@@ -1,0 +1,33 @@
+.event-item {
+  padding: 2rem;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: bold;
+  align-items: center;
+  width: 30%;
+  border: 1px solid #2E2E2E;
+  text-decoration: none;
+  flex-wrap: wrap;
+}
+
+.event-item:hover {
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: border 200ms linear;
+}
+
+.event-title {
+  font-size: 1.5rem;
+}
+
+.event-client {
+  font-size: 1rem;
+  color: #D3D3D3;
+}
+
+.event-date {
+  font-size: 0.75rem;
+  padding-top: 2rem;
+}

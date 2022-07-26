@@ -14,20 +14,15 @@
   cursor: pointer;
 }
 
+.add-btn:hover {
+  background-color: rgb(0, 0, 208);
+}
+
 .event-list {
   width: 100%;
   padding-top: 3rem;
-}
-
-.event-item {
   display: flex;
-  padding: 1rem;
-  justify-content: space-between;
-  background-color: #2E2E2E;
-  color: #fff;
-  border-radius: 10px;
-  font-weight: bold;
-  align-items: center;
+  gap: 20px;
 }
 
 .view-btn {
