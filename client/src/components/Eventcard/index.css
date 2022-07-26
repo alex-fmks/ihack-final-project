@@ -12,6 +12,12 @@
   flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 600px) {
+  .event-item {
+    width: 100%;
+  }
+}
+
 .event-item:hover {
   border: 1px solid #fff;
   cursor: pointer;

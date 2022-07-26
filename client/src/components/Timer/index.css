@@ -1,0 +1,77 @@
+.display {
+  background-color: #000;
+  color: #fff;
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 5rem;
+  margin-top: 2rem;
+  border-radius: 10px;
+  border: 1px solid red
+}
+
+#btns {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-start {
+  padding: 1rem;
+  background-color: green;
+  color: #fff;
+  border-style: none;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-start:hover {
+  background-color: rgb(1, 109, 1);
+}
+
+.btn-stop {
+  padding: 1rem;
+  background-color: red;
+  color: #fff;
+  border-style: none;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-stop:hover {
+  background-color: rgb(214, 0, 0);
+}
+
+.btn-resume {
+  padding: 1rem;
+  background-color: violet;
+  color: #fff;
+  border-style: none;
+  border-radius: 10px;
+  width: 100px;
+  margin-left: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-resume:hover {
+  background-color: rgb(208, 114, 208);
+}
+
+.btn-reset {
+  padding: 1rem;
+  background-color: orange;
+  color: #fff;
+  border-style: none;
+  border-radius: 10px;
+  width: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  background-color: rgb(227, 148, 2);
+}
