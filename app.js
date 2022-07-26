@@ -2,8 +2,6 @@
 // https://www.npmjs.com/package/dotenv
 require("dotenv/config");
 
-const { isAuthenticated } = require("./middlewares/jwt");
-
 // ℹ️ Connects to the database
 require("./db");
 
@@ -21,14 +19,16 @@ require("./config")(app);
 // const allRoutes = require("./routes/index.routes");
 // app.use("/api", isAuthenticated, allRoutes);
 
+const { isAuthenticated } = require("./middlewares/jwt");
+
+const allRoutes = require("./routes/index.routes");
+app.use("/api", allRoutes);
+
+const events = require("./routes/events");
+app.use("/api/events", isAuthenticated, events);
+
 const auth = require("./routes/auth");
 app.use("/api/auth", auth);
-
-const eventsRouter = require("./routes/index.routes");
-app.use("/events", eventsRouter, isAuthenticated);
-
-const event = require("./routes/event");
-app.use("/events", event);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);

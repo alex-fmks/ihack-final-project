@@ -6,14 +6,14 @@ function Events() {
     <>
       <div className="event-header">
         <h1>All Events</h1>
-        <a href="/create-event">
+        <a href="api/create-event">
           <button className="add-btn">Create event</button>
         </a>
       </div>
       <div className="event-list">
         <div className="event-item">
           <p>Event title</p>
-          <a href="/events/:id">
+          <a href="api/events/:id">
             <button className="view-btn">View</button>
           </a>
         </div>

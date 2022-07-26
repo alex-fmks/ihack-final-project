@@ -9,7 +9,7 @@ function EventDetails() {
 
   useEffect(() => {
     axios
-      .get(`/events/${id}`)
+      .get(`/api/events/${id}`)
       .then((response) => {
         console.log(response);
         setEvent(response.data);
