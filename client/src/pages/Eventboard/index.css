@@ -1,10 +1,10 @@
 .client-data {
-  background-color: #f3f3f3;
+  background-color: #1C1D21;
   border-radius: 10px;
   width: 100%;
-  color: #000;
-  line-height: 0.5;
+  color: #fff;
   padding: 1rem;
+  line-height: 0.5;
   box-sizing: border-box;
 }
 

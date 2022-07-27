@@ -34,7 +34,7 @@ function Eventboard() {
       ) : (
         <div key={event.id} style={{ display: "flex" }}>
           <div className="board-console">
-            <h1>{event.title}</h1>
+            <p>{event.title}</p>
             <div className="client-data">
               <p className="client-name">{event.client}</p>
               <p>
@@ -45,7 +45,7 @@ function Eventboard() {
             <Timer />
           </div>
           <div className="task-console">
-            <h1>Task Console</h1>
+            <p>Task Console</p>
           </div>
         </div>
       )}

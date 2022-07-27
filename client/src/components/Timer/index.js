@@ -48,7 +48,7 @@ const Timer = () => {
             <IconPlayerStop />
           </button>
         )}
-        <button onClick={() => setTime(0)} className="btn-skip">
+        <button onClick={() => setTime(0)} className="btn-skip" disabled>
           <IconPlayerSkipForward />
         </button>
       </div>
