@@ -9,6 +9,12 @@ const eventSchema = new Schema({
     houseNumber: Number,
     postcode: Number,
   },
+  timers: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Timer",
+    },
+  ],
 });
 
 const Event = model("Event", eventSchema);

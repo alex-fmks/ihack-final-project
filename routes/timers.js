@@ -11,4 +11,12 @@ router.post("/", (req, res, next) => {
     .catch((err) => next(err));
 });
 
+router.get("/:id", (req, res, next) => {
+  Timer.findById(req.params.id)
+    .then((event) => {
+      res.status(200).json(event);
+    })
+    .catch((err) => next(err));
+});
+
 module.exports = router;

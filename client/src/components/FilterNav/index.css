@@ -10,6 +10,6 @@
 }
 
 .nav-link:hover {
-  color: red;
+  color: rgb(177, 41, 41);
   transition: color 200ms linear;
 }
