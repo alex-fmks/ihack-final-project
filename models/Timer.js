@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
 const timerSchema = new Schema({
-  starttime: Date,
+  starttime: new Date(),
   duration: Number,
   name: String,
 });
