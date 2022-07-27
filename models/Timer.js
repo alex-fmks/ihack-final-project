@@ -13,6 +13,7 @@ const timerSchema = new Schema({
   },
   duration: Number,
   title: String,
+  role: String,
 });
 
 const Timer = model("Timer", timerSchema);

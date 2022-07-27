@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import AddTimer from "../AddTimer";
 import TimerTask from "../TimerTask";
+import FilterNav from "../FilterNav";
 
 function TaskConsole() {
   const [timers, setTimers] = useState([]);
   return (
     <>
-      <p>Timer Console</p>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <p>Timer Console</p>
+        <FilterNav />
+      </div>
       {timers.map((timer) => (
         <TimerTask key={timer._id} {...timer} />
       ))}

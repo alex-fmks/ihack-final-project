@@ -5,8 +5,9 @@ function DropdownToggle() {
   return (
     <>
       <select className="dropdown-select">
-        <option value="camera">Kamera</option>
-        <option value="light">Licht</option>
+        <option value="admin">Admin</option>
+        <option value="camera">Camera</option>
+        <option value="light">Light</option>
         <option value="sound">Sound</option>
       </select>
     </>

@@ -6,7 +6,6 @@ function Toolbar() {
   return (
     <div className="toolbar-nav">
       <h1>Eventname</h1>
-      <Dropdown />
     </div>
   );
 }
