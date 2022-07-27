@@ -32,11 +32,9 @@ function Eventboard() {
       {event === null ? (
         <h3>Loading...</h3>
       ) : (
-        <div key={event.id}>
-          <div className="board-header">
-            <h1>{event.title}</h1>
-          </div>
+        <div key={event.id} style={{ display: "flex" }}>
           <div className="board-console">
+            <h1>{event.title}</h1>
             <div className="client-data">
               <p className="client-name">{event.client}</p>
               <p>
@@ -45,6 +43,9 @@ function Eventboard() {
               <p>{event.location.postcode} Berlin</p>
             </div>
             <Timer />
+          </div>
+          <div className="task-console">
+            <h1>Task Console</h1>
           </div>
         </div>
       )}

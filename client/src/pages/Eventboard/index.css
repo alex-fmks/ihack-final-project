@@ -1,17 +1,11 @@
-.board-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: bold;
-}
-
 .client-data {
-  padding: 1rem;
   background-color: #f3f3f3;
   border-radius: 10px;
   width: 100%;
   color: #000;
   line-height: 0.5;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .client-name {
@@ -23,4 +17,9 @@
   font-weight: bold;
   justify-content: space-between;
   width: 30%;
+}
+
+.task-console {
+  width: 70%;
+  margin-left: 20px;
 }
