@@ -30,6 +30,9 @@ app.use("/api/events", isAuthenticated, events);
 const auth = require("./routes/auth");
 app.use("/api/auth", auth);
 
+const timers = require("./routes/timers");
+app.use("/api/timers", timers);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 

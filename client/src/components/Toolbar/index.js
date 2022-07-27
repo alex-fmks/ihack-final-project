@@ -5,7 +5,7 @@ import "./index.css";
 function Toolbar() {
   return (
     <div className="toolbar-nav">
-      <p>Test</p>
+      <h1>Eventname</h1>
       <Dropdown />
     </div>
   );

@@ -1,4 +1,6 @@
 .toolbar-nav {
   display: flex;
   justify-content: space-between;
+  line-height: 0;
+  margin-bottom: 2rem;
 }

@@ -1,9 +1,18 @@
 const { Schema, model } = require("mongoose");
 
+let dtFormat = new Intl.DateTimeFormat("de-DE", {
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+});
+
 const timerSchema = new Schema({
-  starttime: new Date(),
+  starttime: {
+    type: Schema.Types.Date,
+    default: Date.now,
+  },
   duration: Number,
-  name: String,
+  title: String,
 });
 
 const Timer = model("Timer", timerSchema);

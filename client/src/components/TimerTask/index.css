@@ -1,0 +1,22 @@
+.timer-container {
+  display: flex;
+  padding: 0.5rem;
+  gap: 50px;
+  width: 100%;
+  background-color: #1C1D21;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.timer-start {
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+.timer-duration {
+  font-weight: bold;
+}
+
+.timer-title {
+  font-weight: bold;
+}
