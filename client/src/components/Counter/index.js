@@ -5,7 +5,6 @@ import {
   IconPlayerSkipBack,
   IconPlayerSkipForward,
   IconPlayerStop,
-  IconRefresh,
 } from "@tabler/icons";
 
 const Timer = () => {
