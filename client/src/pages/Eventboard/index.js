@@ -1,7 +1,8 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Timer from "../../components/Timer";
+import Counter from "../../components/Counter";
+import TaskConsole from "../../components/TaskConsole";
 import "./index.css";
 
 function Eventboard() {
@@ -42,10 +43,10 @@ function Eventboard() {
               </p>
               <p>{event.location.postcode} Berlin</p>
             </div>
-            <Timer />
+            <Counter />
           </div>
           <div className="task-console">
-            <p>Task Console</p>
+            <TaskConsole />
           </div>
         </div>
       )}

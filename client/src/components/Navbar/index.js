@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import "./index.css";
 import Logo from "../../logo.svg";
 import Modal from "../Modal";
-import { useContext } from "react";
-import { AuthContext } from "../../context/auth";
+/* import { useContext } from "react";
+import { AuthContext } from "../../context/auth"; */
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { isLoggedIn, user } = useContext(AuthContext);
+  /*   const { isLoggedIn, user } = useContext(AuthContext); */
   return (
     <div className="nav-header">
       <img src={Logo} alt="Header Logo" width="60px" />
