@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Toolbar from "../../components/Toolbar/index";
+/* import Toolbar from "../../components/Toolbar/index"; */
 import Counter from "../../components/Counter";
 import TaskConsole from "../../components/TaskConsole";
 import "./index.css";
@@ -31,7 +31,7 @@ function Eventboard() {
 
   return (
     <>
-      <Toolbar />
+      {/*       <Toolbar /> */}
       {event === null ? (
         <h3>Loading...</h3>
       ) : (
@@ -48,7 +48,7 @@ function Eventboard() {
             <Counter />
           </div>
           <div className="task-console">
-            <TaskConsole />
+            <TaskConsole timers={event.timers} />
           </div>
         </div>
       )}

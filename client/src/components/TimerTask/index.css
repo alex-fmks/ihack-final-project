@@ -7,16 +7,14 @@
   border-radius: 10px;
   margin-bottom: 0.5rem;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
-.timer-start {
+.timer-setup {
   font-weight: bold;
-}
-
-.timer-duration {
-  font-weight: bold;
-}
-
-.timer-title {
-  font-weight: bold;
+  color: #fff;
+  padding: 0.5rem;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #000;
 }

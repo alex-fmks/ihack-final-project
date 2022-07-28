@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import AddTimer from "../AddTimer";
 import TimerTask from "../TimerTask";
 import FilterNav from "../FilterNav";
+import axios from "axios";
 
-function TaskConsole() {
-  const [timers, setTimers] = useState([]);
+function TaskConsole(props) {
+  const [timers, setTimers] = useState(props.timers);
+
+  /*   useEffect(() => {
+    axios.
+  }) */
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-between" }}>

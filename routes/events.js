@@ -14,6 +14,7 @@ router.post("/", (req, res, next) => {
 // get an specific event
 router.get("/:id", (req, res, next) => {
   Event.findById(req.params.id)
+    .populate("timers")
     .then((event) => {
       res.status(200).json(event);
     })

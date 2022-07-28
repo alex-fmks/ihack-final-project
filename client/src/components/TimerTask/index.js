@@ -1,22 +1,71 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Dropdown from "../../components/Dropdown/index";
 import "./index.css";
+import axios from "axios";
 
-/* let dtFormat = new Intl.DateTimeFormat("de-DE", {
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-}); */
+function TimerTask({ starttime, duration, role, title, _id }) {
+  const [startTime, setStartTime] = useState(
+    new Date(starttime).toLocaleTimeString("de-DE")
+  );
+  const [timerDuration, setTimerDuration] = useState(duration);
+  const [timerTitle, setTimerTitle] = useState(title);
+  const [timerRole, setTimerRole] = useState(role);
 
-function TimerTask({ starttime, duration, title }) {
-  /*   const roles = ["Admin", "Camera", "Light", "Sound"]; */
+  useEffect(() => {
+    axios
+      .post("http://localhost:5005/api/timers/edit", {
+        duration: timerDuration,
+        title: timerTitle,
+        role: timerRole,
+        timerId: _id,
+      })
+      .then((response) => {
+        console.log("Changes saved");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [startTime, timerDuration, timerTitle, timerRole, _id]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const requestBody = {
+      starttime: startTime,
+      duration: timerDuration,
+      title: timerTitle,
+      role: timerRole,
+    };
+    axios
+      .post("http://localhost:5005/api/timers", requestBody)
+      .then((response) => {
+        console.log(response);
+      });
+  };
+
+  const handleStartTime = (event) => setStartTime(event.target.value);
+  const handleTimerDuration = (event) => setTimerDuration(event.target.value);
+  const handleTimerTitle = (event) => setTimerTitle(event.target.value);
+
   return (
-    <div className="timer-container">
-      <p className="timer-start">{starttime}</p>
-      <p className="timer-duration">{duration}</p>
-      <p className="timer-title">{title}</p>
-      <Dropdown />
-    </div>
+    <form onSubmit={handleSubmit} className="timer-container">
+      <input
+        value={startTime}
+        onChange={handleStartTime}
+        className="timer-setup"
+      />
+      <input
+        value={timerDuration}
+        type="number"
+        onChange={handleTimerDuration}
+        className="timer-setup"
+      />
+      <input
+        value={timerTitle}
+        onChange={handleTimerTitle}
+        className="timer-setup"
+      />
+      <Dropdown timerRole={timerRole} setTimerRole={setTimerRole} />
+    </form>
   );
 }
 
