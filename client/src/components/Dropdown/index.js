@@ -5,7 +5,7 @@ function DropdownToggle(props) {
   const handleTimerRole = (event) => props.setTimerRole(event.target.value);
   const [selectedRole, setSelectedRole] = useState("Admin");
   return (
-    <div>
+    <>
       <select
         value={props.timerRole}
         className="dropdown-select"
@@ -16,7 +16,7 @@ function DropdownToggle(props) {
         <option value="light">Light</option>
         <option value="sound">Sound</option>
       </select>
-    </div>
+    </>
   );
 }
 

@@ -6,4 +6,5 @@
   border-style: none;
   width: 200px;
   cursor: pointer;
+  box-sizing: border-box;
 }

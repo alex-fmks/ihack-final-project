@@ -24,6 +24,10 @@
   cursor: pointer;
 }
 
+.nav-sign-btn:hover {
+  background-color: #6f016f;
+}
+
 .nav-log-btn {
   padding: 1rem;
   border-style: none;
@@ -32,4 +36,8 @@
   color: blue;
   font-weight: bold;
   cursor: pointer;
+}
+
+.nav-log-btn:hover {
+  background-color: #d1cfcf;
 }
