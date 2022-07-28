@@ -5,18 +5,18 @@ import FilterNav from "../FilterNav";
 import axios from "axios";
 
 function TaskConsole(props) {
-  const [timers, setTimers] = useState(props.timers);
+  const [filterTimers, setFilterTimers] = useState(props.timers);
 
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <p>Timer Console</p>
-        <FilterNav />
+        <FilterNav timers={props.timers} setFilterTimers={setFilterTimers} />
       </div>
-      {timers.map((timer) => (
+      {filterTimers.map((timer) => (
         <TimerTask key={timer._id} {...timer} />
       ))}
-      <AddTimer timers={timers} setTimers={setTimers} />
+      <AddTimer timers={filterTimers} setTimers={setFilterTimers} />
     </>
   );
 }

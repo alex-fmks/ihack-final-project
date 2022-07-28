@@ -1,23 +1,35 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./index.css";
 
-function FilterNav() {
+function FilterNav({ timers, setFilterTimers }) {
+  function filterRoles(event) {
+    console.log(event.target.id);
+    let filterRole = event.target.id;
+    if (filterRole === "admin") {
+      setFilterTimers(timers);
+    } else {
+      let filteredTimers = timers.filter((timer) => {
+        return timer.role === filterRole;
+      });
+      setFilterTimers(filteredTimers);
+    }
+  }
+
   return (
     <>
       <ul className="nav-wrapper">
-        <Link className="nav-link" to="/">
+        <button onClick={filterRoles} className="nav-link" id="admin">
           Admin
-        </Link>
-        <Link className="nav-link" to="/">
+        </button>
+        <button onClick={filterRoles} className="nav-link" id="camera">
           Camera
-        </Link>
-        <Link className="nav-link" to="/">
+        </button>
+        <button onClick={filterRoles} className="nav-link" id="light">
           Light
-        </Link>
-        <Link className="nav-link" to="/">
+        </button>
+        <button onClick={filterRoles} className="nav-link" id="sound">
           Sound
-        </Link>
+        </button>
       </ul>
     </>
   );
