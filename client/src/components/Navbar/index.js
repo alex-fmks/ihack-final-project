@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
-import Logo from "../../logo.svg";
+/* import Logo from "../../logo.svg"; */
 import Modal from "../Modal";
 /* import { useContext } from "react";
 import { AuthContext } from "../../context/auth"; */
@@ -11,7 +11,7 @@ function Navbar() {
   /*   const { isLoggedIn, user } = useContext(AuthContext); */
   return (
     <div className="nav-header">
-      <img src={Logo} alt="Header Logo" width="60px" />
+      {/*       <img src={Logo} alt="Header Logo" width="60px" /> */}
       <div className="auth-btns">
         <nav>
           <Link to="/signup">

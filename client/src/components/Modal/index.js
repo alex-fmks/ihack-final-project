@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./index.css";
-import Logo from "../../logo.svg";
+/* import Logo from "../../logo.svg"; */
 import XIcon from "../../xclose.svg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -48,7 +48,7 @@ function Modal({ open, onClose }) {
           alt="Close Login"
           className="close-modal"
         />
-        <img src={Logo} alt="Logo" className="login-logo" />
+        {/*         <img src={Logo} alt="Logo" className="login-logo" /> */}
         <form onSubmit={handleSubmit}>
           <div className="modal-header">
             <p>LOGIN</p>
