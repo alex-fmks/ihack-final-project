@@ -81,3 +81,7 @@ form {
   color: black;
   cursor: pointer;
 }
+
+.login-btn:hover {
+  background-color: rgb(106, 214, 178);
+}
