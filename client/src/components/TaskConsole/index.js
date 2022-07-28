@@ -7,9 +7,6 @@ import axios from "axios";
 function TaskConsole(props) {
   const [timers, setTimers] = useState(props.timers);
 
-  /*   useEffect(() => {
-    axios.
-  }) */
   return (
     <>
       <div style={{ display: "flex", justifyContent: "space-between" }}>

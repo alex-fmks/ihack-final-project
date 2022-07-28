@@ -3,19 +3,23 @@ import "./index.css";
 
 function DropdownToggle(props) {
   const handleTimerRole = (event) => props.setTimerRole(event.target.value);
+  const [selectedRole, setSelectedRole] = useState("Admin");
   return (
-    <>
-      <select
-        value={props.timerRole}
-        className="dropdown-select"
-        onChange={handleTimerRole}
-      >
-        <option value="admin">Admin</option>
-        <option value="camera">Camera</option>
-        <option value="light">Light</option>
-        <option value="sound">Sound</option>
-      </select>
-    </>
+    <div>
+      {selectedRole.map((item, index) => (
+        <select
+          value={props.timerRole}
+          className="dropdown-select"
+          onChange={handleTimerRole}
+          key={index}
+        >
+          <option value="admin">{item}</option>
+          <option value="camera">{item}</option>
+          <option value="light">{item}</option>
+          <option value="sound">{item}</option>
+        </select>
+      ))}
+    </div>
   );
 }
 
