@@ -24,7 +24,7 @@ function CreateEvent(props) {
     };
     const storedToken = localStorage.getItem("authToken");
     axios
-      .post("http://localhost:5005/api/events", requestBody, {
+      .post("/api/events", requestBody, {
         headers: { Authorization: `Bearer ${storedToken}` },
       })
       .then((response) => {

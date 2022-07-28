@@ -7,7 +7,7 @@ function AddTimer(props) {
   const { id } = useParams();
   function handleAddTimer() {
     axios
-      .post("http://localhost:5005/api/timers", {
+      .post("/api/timers", {
         duration: 0,
         title: "Title",
         role: "Admin",

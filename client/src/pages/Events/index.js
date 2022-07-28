@@ -10,7 +10,7 @@ function Events() {
   const getAllEvents = () => {
     const storedToken = localStorage.getItem("authToken");
     axios
-      .get("http://localhost:5005/api/events", {
+      .get("/api/events", {
         headers: { Authorization: `Bearer ${storedToken}` },
       })
       .then((response) => {

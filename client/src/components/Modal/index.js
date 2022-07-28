@@ -19,7 +19,7 @@ function Modal({ open, onClose }) {
     event.preventDefault();
     const requestBody = { username, password };
     axios
-      .post("http://localhost:5005/api/auth/login", requestBody)
+      .post("/api/auth/login", requestBody)
       .then((response) => {
         const token = response.data.authToken;
         storeToken(token);

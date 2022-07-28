@@ -14,7 +14,7 @@ function TimerTask({ starttime, duration, role, title, _id }) {
 
   useEffect(() => {
     axios
-      .post("http://localhost:5005/api/timers/edit", {
+      .post("/api/timers/edit", {
         duration: timerDuration,
         title: timerTitle,
         role: timerRole,
@@ -36,11 +36,9 @@ function TimerTask({ starttime, duration, role, title, _id }) {
       title: timerTitle,
       role: timerRole,
     };
-    axios
-      .post("http://localhost:5005/api/timers", requestBody)
-      .then((response) => {
-        console.log(response);
-      });
+    axios.post("/api/timers", requestBody).then((response) => {
+      console.log(response);
+    });
   };
 
   const handleStartTime = (event) => setStartTime(event.target.value);

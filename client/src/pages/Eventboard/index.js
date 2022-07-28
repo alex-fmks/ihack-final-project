@@ -20,7 +20,7 @@ function Eventboard() {
   const getOneEvent = () => {
     const storedToken = localStorage.getItem("authToken");
     axios
-      .get(`http://localhost:5005/api/events/${id}`, {
+      .get(`/api/events/${id}`, {
         headers: { Authorization: `Bearer ${storedToken}` },
       })
       .then((response) => {
