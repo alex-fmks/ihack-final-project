@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Dropdown from "../../components/Dropdown/index";
 import "./index.css";
 import axios from "axios";
+import { IconPlayerPlay } from "@tabler/icons";
 
 function TimerTask({ starttime, duration, role, title, _id }) {
   const [startTime, setStartTime] = useState(
@@ -48,6 +49,9 @@ function TimerTask({ starttime, duration, role, title, _id }) {
 
   return (
     <form onSubmit={handleSubmit} className="timer-container">
+      <button className="btn-timer-play">
+        <IconPlayerPlay />
+      </button>
       <input
         value={startTime}
         onChange={handleStartTime}

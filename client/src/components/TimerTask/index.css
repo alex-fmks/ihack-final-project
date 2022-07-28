@@ -18,3 +18,11 @@
   border-radius: 5px;
   background-color: #000;
 }
+
+.btn-timer-play {
+  background-color: #000;
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
