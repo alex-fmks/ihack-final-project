@@ -1,10 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./index.css";
-<<<<<<< Updated upstream
-import Logo from "../../logo.svg";
-=======
 import Logo from "../../movact-icon.png";
->>>>>>> Stashed changes
 import XIcon from "../../xclose.svg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
