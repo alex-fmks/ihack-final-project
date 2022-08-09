@@ -1,10 +1,7 @@
 .nav-header {
   display: flex;
   justify-content: space-between;
-<<<<<<< Updated upstream
-=======
   align-items: center;
->>>>>>> Stashed changes
 }
 
 @media only screen and (max-width: 850px) {
