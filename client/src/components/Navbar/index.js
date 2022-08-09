@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./index.css";
+<<<<<<< Updated upstream
 import Logo from "../../logo.svg";
+=======
+import Logo from "../../movact.png";
+>>>>>>> Stashed changes
 import Modal from "../Modal";
 /* import { useContext } from "react";
 import { AuthContext } from "../../context/auth"; */
@@ -11,7 +15,11 @@ function Navbar() {
   /*   const { isLoggedIn, user } = useContext(AuthContext); */
   return (
     <div className="nav-header">
+<<<<<<< Updated upstream
       <img src={Logo} alt="Header Logo" width="60px" />
+=======
+      <img src={Logo} alt="Header Logo" height="40px" />
+>>>>>>> Stashed changes
       <div className="auth-btns">
         <nav>
           <Link to="/signup">
